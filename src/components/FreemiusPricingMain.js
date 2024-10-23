@@ -921,25 +921,6 @@ class FreemiusPricingMain extends Component {
                   upgradeHandler={this.upgrade}
                 />
               </Section>
-              <Section fs-section="custom-implementation">
-                <h2>
-                  Need more sites, custom implementation and dedicated support?
-                </h2>
-                <p>
-                  We got you covered!{' '}
-                  <a
-                    href={PageManager.getInstance().getContactUrl(
-                      this.state.plugin,
-                      'pre_sale_question'
-                    )}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Click here to contact us
-                  </a>{' '}
-                  and we'll scope a plan that's tailored to your needs.
-                </p>
-              </Section>
               {pricingData.plugin.hasRefundPolicy() &&
                 (!this.state.isTrial || trialUtilized) && (
                   <Section fs-section="money-back-guarantee">
@@ -983,9 +964,6 @@ class FreemiusPricingMain extends Component {
                   <Testimonials />
                 </Section>
               )}
-            <Section fs-section="faq">
-              <Faq toggleRefundPolicyModal={this.toggleRefundPolicyModal} />
-            </Section>
           </main>
           {pricingData.isActivatingTrial && (
             <Loader title="Activating trial..." />

@@ -59,7 +59,11 @@ class RefundPolicy extends Component {
         <p className="fs-money-back-guarantee-message">{refundPolicy}</p>
         <button
           className="fs-button fs-button--size-small"
-          onClick={evt => this.props.toggleRefundPolicyModal(evt)}
+          onClick={() =>
+            window.open(
+              'https://laborator.co/terms-and-conditions/#refund-policy'
+            )
+          }
         >
           Learn More
         </button>

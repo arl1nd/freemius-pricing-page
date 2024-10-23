@@ -302,7 +302,7 @@ class Package extends Component {
         BillingCycleString.ANNUAL === this.context.selectedBillingCycle
           ? // The 'en-US' is intentionally hard-coded here because we are spliting the decimal by '.'.
             Helper.formatNumber(
-              selectedPricing.getMonthlyAmount(BillingCycle.ANNUAL),
+              selectedPricing.getAmount(BillingCycle.ANNUAL),
               'en-US'
             )
           : selectedPricing[`${this.context.selectedBillingCycle}_price`]
@@ -411,7 +411,7 @@ class Package extends Component {
               {!planPackage.is_free_plan &&
                 BillingCycleString.LIFETIME !==
                   this.context.selectedBillingCycle && (
-                  <sub className="fs-selected-pricing-amount-cycle">/ mo</sub>
+                  <sub className="fs-selected-pricing-amount-cycle">/ yr</sub>
                 )}
             </span>
           </div>
